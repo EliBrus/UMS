@@ -9,15 +9,19 @@ import { User } from "../interfaces/user";
 })
 export class UserComponent implements OnInit {
   @Input('user-data') user: User;
-  @Output ('onDeleteUser') userDeleted = new EventEmitter();
+  @Output ('onDeleteUser') onDeleteUser = new EventEmitter();
+  @Output ('onSelectUser') onSelectUser = new EventEmitter();
   constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
   DeleteUser(){
-    this.userDeleted.emit(this.user);
+    this.onDeleteUser.emit(this.user);
     //this.userService.DeleteUser(this.user);
-
+  }
+  UpdateUser(){
+    this.onSelectUser.emit(this.user);
+    //this.userService.DeleteUser(this.user);
   }
 
 }
