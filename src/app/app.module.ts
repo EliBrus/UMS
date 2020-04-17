@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { UsersComponent } from './users/users.component';
 
-import { UserService } from "./users/user.service";
+import { UserService } from "./services/user.service";
 import { UserComponent } from './user/user.component';
 
 @NgModule({
