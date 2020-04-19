@@ -1,9 +1,11 @@
 <h1>User Management System</h1>
+<a href="#" (click)="NewUser()">New User</a>
 <div class ="main">
+  
   <div class="users">
     <app-users (updateUser)="UpdateUser($event)"></app-users>
   </div>
-  <div class="userDetail" *ngIf="userSelected">
+  <div class="userDetail" *ngIf="showForm">
     <app-user-detail [user]="userSelected" ></app-user-detail>
   </div>
 </div>
