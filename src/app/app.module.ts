@@ -8,11 +8,12 @@ import { UserService } from "./services/user.service";
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NavComponent } from './nav/nav.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ModalBasicComponent } from './modal-basic/modal-basic.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, FontAwesomeModule ],
-  declarations: [ AppComponent, HelloComponent, UsersComponent, UserComponent, UserDetailComponent, NavComponent ],
+  imports:      [ BrowserModule, FormsModule, NgbModule ],
+  declarations: [ AppComponent, HelloComponent, UsersComponent, UserComponent, UserDetailComponent, NavComponent, ModalBasicComponent ],
   providers: [ UserService ],
   bootstrap:    [ AppComponent ]
 })
