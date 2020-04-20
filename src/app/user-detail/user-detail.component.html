@@ -2,34 +2,40 @@
   <input type="hidden" name="id" [(ngModel)]="user.id">
   <div class="form-group">
     <label for="firstname">First Name</label>
-    <input [(ngModel)]="user.name" name="firstname" id="firstname">
+    <input [(ngModel)]="user.name" class="form-control form" name="firstname" id="firstname">
   </div>
   <div class="form-group">
     <label for="lastname">Last Name</label>
-    <input [(ngModel)]="user.lastname" name="lastname" id="lastname">
+    <input [(ngModel)]="user.lastname" class="form-control form" name="lastname" id="lastname">
   </div>
   <div class="form-group">
     <label for="fiscalcode">Fiscal Code</label>
-    <input [(ngModel)]="user.fiscalcode" name="fiscalcode" id="fiscalcode">
+    <input [(ngModel)]="user.fiscalcode" class="form-control form" name="fiscalcode" id="fiscalcode">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input [(ngModel)]="user.email" type="email" name="email" id="email">
+    <input [(ngModel)]="user.email" class="form-control form" type="email" name="email" id="email">
   </div>
   <div class="form-group">
     <label for="phone">Phone</label>
-    <input [(ngModel)]="user.phone" name="phone" id="phone">
+    <input [(ngModel)]="user.phone" class="form-control form" name="phone" id="phone">
   </div>
   <div class="form-group">
     <label for="province">Province</label>
-    <input [(ngModel)]="user.province" name="province" id="province">
+    <input [(ngModel)]="user.province" class="form-control form" name="province" id="province">
   </div>
   <div class="form-group">
     <label for="age">Age</label>
-    <input [(ngModel)]="user.age" type="number" name="age" id="age">
+    <input [(ngModel)]="user.age" class="form-control form" type="number" name="age" id="age">
   </div>
   <div class="form-group form-footer">
-    <button class="btn-reset" (click)="ResetForm(f.form)">RESET</button>
-    <button class="btn-save" (click)="SaveUser()">SAVE</button>
+    <div class="row">
+      <div class="">
+        <button class="btn btn-secondary" (click)="ResetForm(f.form)">Reset</button>
+      </div>
+      <div class="col-sm-5">
+        <button class="btn btn-success" (click)="SaveUser()">Save</button>
+      </div>
+    </div>  
   </div>
 </form>

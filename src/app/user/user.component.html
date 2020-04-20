@@ -1,11 +1,15 @@
 <td>{{user.name}}</td>
 <td>{{user.lastname}}</td>
-<td>{{user.fiscalcode}}</td>
 <td>{{user.email}}</td>
 <td>{{user.phone}}</td>
 <td>{{user.province}}</td>
-<td>{{user.age}}</td>
 <td>
-  <button class="update" (click)="UpdateUser()">Update</button>
-  <button class="delete" (click)="DeleteUser()">Delete</button>
+  <div class="row">
+    <div class="col-sm-4">
+      <button class="btn btn-primary btn-sm" (click)="UpdateUser()">Update</button>
+    </div>
+    <div class="col-sm-1">
+      <button class="btn btn-danger btn-sm" (click)="DeleteUser()">Delete</button>
+    </div>
+  </div>
 </td>
