@@ -50,6 +50,9 @@ export class UserService {
   GetUsers() {
     return this.users;
   }
+  GetUser(id: number): User {
+    return this.users.find( user => user.id === id);
+  }
   DeleteUser(user) {
     let index = this.users.indexOf(user);
     if (index >=0) {
@@ -58,12 +61,12 @@ export class UserService {
   }
   UpdateUser(user: User) {
     const idx = this.users.findIndex((v) => v.id === user.id);
-    alert(idx);
     if (idx !== -1) {
       this.users[idx] = user;
     }
   }
   CreateUser(user: User) {
+    user.id = this.users.length + 1;
     this.users.splice(0, 0, user);
   }
 }

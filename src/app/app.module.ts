@@ -10,10 +10,38 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NavComponent } from './nav/nav.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ModalBasicComponent } from './modal-basic/modal-basic.component';
+import {RouterModule, Routes } from '@angular/router';
+import { UserDataComponent } from './user-data/user-data.component';
+
+const routes: Routes = [
+  {
+    path: 'users',
+    component: UsersComponent
+  },
+  {
+      path: '',
+      redirectTo: 'users',
+      pathMatch: 'full'
+  },
+  {
+      path: 'users/new',
+      component: UserDetailComponent
+  }
+  ,
+  {
+      path: 'users/:id/edit',
+      component: UserDetailComponent
+  }
+  ,
+  {
+      path: 'users/:id/show',
+      component: UserDataComponent
+  }
+];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule ],
-  declarations: [ AppComponent, HelloComponent, UsersComponent, UserComponent, UserDetailComponent, NavComponent, ModalBasicComponent ],
+  imports:      [ BrowserModule, FormsModule, NgbModule, RouterModule.forRoot(routes) ],
+  declarations: [ AppComponent, HelloComponent, UsersComponent, UserComponent, UserDetailComponent, NavComponent, ModalBasicComponent, UserDataComponent ],
   providers: [ UserService ],
   bootstrap:    [ AppComponent ]
 })
